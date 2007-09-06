@@ -1,0 +1,126 @@
+--- OpenDocument-0.1.2/usr/share/pear/OpenDocument/Bookmark.php~	2007-09-06 22:19:25.000000000 +0000
++++ OpenDocument-0.1.2/usr/share/pear/OpenDocument/Bookmark.php	2007-09-06 22:20:49.000000000 +0000
+@@ -1,5 +1,5 @@
+ <?php
+-require_once 'Element.php';
++require_once 'OpenDocument/Element.php';
+ class OpenDocument_Bookmark extends OpenDocument_Element
+ {
+     private $name;
+@@ -10,4 +10,4 @@
+         $this->name = $name;
+     }
+ }
+-?>
+\ No newline at end of file
++?>
+--- OpenDocument-0.1.2/usr/share/pear/OpenDocument/Heading.php~	2007-09-06 22:19:25.000000000 +0000
++++ OpenDocument-0.1.2/usr/share/pear/OpenDocument/Heading.php	2007-09-06 22:21:00.000000000 +0000
+@@ -27,7 +27,7 @@
+ * @since      File available since Release 0.1.0
+ */
+ 
+-require_once 'StyledElement.php';
++require_once 'OpenDocument/StyledElement.php';
+ 
+ /**
+ * OpenDocument_Heading element
+@@ -204,4 +204,4 @@
+         return OpenDocument_Span::instance($this, $text);
+     }
+ }
+-?>
+\ No newline at end of file
++?>
+--- OpenDocument-0.1.2/usr/share/pear/OpenDocument/Hyperlink.php~	2007-09-06 22:19:25.000000000 +0000
++++ OpenDocument-0.1.2/usr/share/pear/OpenDocument/Hyperlink.php	2007-09-06 22:21:09.000000000 +0000
+@@ -27,7 +27,7 @@
+ * @since      File available since Release 0.1.0
+ */
+ 
+-require_once 'StyledElement.php';
++require_once 'OpenDocument/StyledElement.php';
+ 
+ /**
+ * OpenDocument_Hyperlink element
+@@ -230,4 +230,4 @@
+         return OpenDocument_Span::instance($this, $text);
+     }
+ }
+-?>
+\ No newline at end of file
++?>
+--- OpenDocument-0.1.2/usr/share/pear/OpenDocument/Paragraph.php~	2007-09-06 22:19:25.000000000 +0000
++++ OpenDocument-0.1.2/usr/share/pear/OpenDocument/Paragraph.php	2007-09-06 22:21:19.000000000 +0000
+@@ -27,7 +27,7 @@
+ * @since      File available since Release 0.1.0
+ */
+ 
+-require_once 'StyledElement.php';
++require_once 'OpenDocument/StyledElement.php';
+ 
+ /**
+ * OpenDocument_Paragraph element
+@@ -159,4 +159,4 @@
+         return OpenDocument_Span::instance($this, $text);
+     }
+ }
+-?>
+\ No newline at end of file
++?>
+--- OpenDocument-0.1.2/usr/share/pear/OpenDocument/Span.php~	2007-09-06 22:19:25.000000000 +0000
++++ OpenDocument-0.1.2/usr/share/pear/OpenDocument/Span.php	2007-09-06 22:21:32.000000000 +0000
+@@ -27,7 +27,7 @@
+ * @since      File available since Release 0.1.0
+ */
+ 
+-require_once 'StyledElement.php';
++require_once 'OpenDocument/StyledElement.php';
+ 
+ /**
+ * OpenDocument_Span element
+@@ -116,4 +116,4 @@
+         return OpenDocument_TextElement::instance($this, $text);
+     }
+ }
+-?>
+\ No newline at end of file
++?>
+--- OpenDocument-0.1.2/usr/share/pear/OpenDocument/StyledElement.php~	2007-09-06 22:19:25.000000000 +0000
++++ OpenDocument-0.1.2/usr/share/pear/OpenDocument/StyledElement.php	2007-09-06 22:21:47.000000000 +0000
+@@ -29,8 +29,8 @@
+ * @since      File available since Release 0.1.0
+ */
+ 
+-require_once 'Element.php';
+-require_once 'ElementStyle.php';
++require_once 'OpenDocument/Element.php';
++require_once 'OpenDocument/ElementStyle.php';
+ 
+ /**
+ * OpenDocument_StyledElement abstract class
+@@ -163,4 +163,4 @@
+         $this->node->setAttributeNS(OpenDocument::NS_TEXT, 'style-name', $style_name);
+     }
+ }
+-?>
+\ No newline at end of file
++?>
+--- OpenDocument-0.1.2/usr/share/pear/OpenDocument/TextElement.php~	2007-09-06 22:19:25.000000000 +0000
++++ OpenDocument-0.1.2/usr/share/pear/OpenDocument/TextElement.php	2007-09-06 22:21:55.000000000 +0000
+@@ -29,7 +29,7 @@
+ * @since      File available since Release 0.1.0
+ */
+ 
+-require_once 'Element.php';
++require_once 'OpenDocument/Element.php';
+ 
+ /**
+ * OpenDocument_TextElement class
+@@ -132,4 +132,4 @@
+         $this->node->parentNode->replaceChild($node, $this->node);
+     }
+ }
+-?>
+\ No newline at end of file
++?>
