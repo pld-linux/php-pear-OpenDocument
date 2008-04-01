@@ -3,8 +3,8 @@
 %define		_subclass	%{nil}
 %define		_status		alpha
 %define		_pearname	OpenDocument
-Summary:	%{_pearname} - read, create or modify office documents in open document format
-Summary(pl.UTF-8):	%{_pearname} - odczyt, zapis i modyfikacja dokumentów zapisanych w formacie open document
+Summary:	%{_pearname} - read, create or modify office documents in OpenDocument format
+Summary(pl.UTF-8):	%{_pearname} - odczyt, zapis i modyfikacja dokumentów zapisanych w formacie OpenDocument
 Name:		php-pear-%{_pearname}
 Version:	0.1.2
 Release:	3
@@ -22,10 +22,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 OpenDocument is a package to read, create or modify office documents
-in open document format.
+in OpenDocument format.
 
 OpenDocument format is a replacement for proprietary office formats
-such as .doc or .xls. This package is a very useful tool for php
+such as .doc or .xls. This package is a very useful tool for PHP
 developers and another point to switch from proprietary office formats
 to OpenDocument one, that means switching to open source software and
 standards.
@@ -38,16 +38,16 @@ In PEAR status of this package is: %{_status}.
 
 %description -l pl.UTF-8
 OpenDocument to pakiet do odczytu, zapisu oraz modyfikacji dokumentów
-zapisanych w formacie opendocument.
+zapisanych w formacie OpenDocument.
 
 Format OpenDocument jest zamiennikiem własnościowych formatów takich
 jak .doc czy .xls. Pakiet ten jest szczególnie przydatnym narzędziem
-dla programistów php planująych przejście na format OpenDocument, to
-jest na standardy oraz oprogramowanie opensource.
+dla programistów PHP planujących przejście na format OpenDocument, to
+jest na standardy oraz oprogramowanie open source.
 
 Pakiet OpenDocument został stworzony jako projekt programu Google
-Summer of Code 2006. Pakiet ten dostarcza zorientowango obiektowo
-interfejsu do pracy nad dokumentami opendocument, podobnego do DOM dla
+Summer of Code 2006. Pakiet ten dostarcza zorientowany obiektowo
+interfejs do pracy nad dokumentami OpenDocument, podobny do DOM dla
 XML.
 
 Ta klasa ma w PEAR status: %{_status}.
