@@ -6,13 +6,12 @@
 Summary:	%{_pearname} - read, create or modify office documents in OpenDocument format
 Summary(pl.UTF-8):	%{_pearname} - odczyt, zapis i modyfikacja dokumentów zapisanych w formacie OpenDocument
 Name:		php-pear-%{_pearname}
-Version:	0.1.2
-Release:	3
+Version:	0.2.0
+Release:	1
 License:	PHP License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	75ec8b86f06aa44c5bf289c735661d9c
-Patch0:		%{name}-paths.patch
+# Source0-md5:	ab9a2366c91a81d664221d2f4ca54206
 URL:		http://pear.php.net/package/OpenDocument/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
@@ -54,19 +53,29 @@ Ta klasa ma w PEAR status: %{_status}.
 
 %prep
 %pear_package_setup
-%patch0 -p1
+
+mv docs/%{_pearname}/examples .
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{php_pear_dir}
+install -d $RPM_BUILD_ROOT{%{php_pear_dir},%{_examplesdir}/%{name}-%{version}}
 %pear_package_install
+
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+
+# don't care for tests
+rm -rf $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{_pearname}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc install.log %doc docs/OpenDocument/*
+%doc install.log
 %{php_pear_dir}/.registry/*.reg
 %{php_pear_dir}/OpenDocument
 %{php_pear_dir}/OpenDocument.php
+
+%{php_pear_dir}/data/%{_pearname}
+
+%{_examplesdir}/%{name}-%{version}
