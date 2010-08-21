@@ -1,13 +1,11 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		OpenDocument
-%define		_subclass	%{nil}
 %define		_status		alpha
 %define		_pearname	OpenDocument
 Summary:	%{_pearname} - read, create or modify office documents in OpenDocument format
 Summary(pl.UTF-8):	%{_pearname} - odczyt, zapis i modyfikacja dokumentów zapisanych w formacie OpenDocument
 Name:		php-pear-%{_pearname}
 Version:	0.2.0
-Release:	1
+Release:	2
 License:	PHP License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
@@ -16,6 +14,7 @@ URL:		http://pear.php.net/package/OpenDocument/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
+Requires:	php-zip
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
