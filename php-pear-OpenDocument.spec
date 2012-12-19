@@ -4,12 +4,12 @@
 Summary:	%{_pearname} - read, create or modify office documents in OpenDocument format
 Summary(pl.UTF-8):	%{_pearname} - odczyt, zapis i modyfikacja dokumentów zapisanych w formacie OpenDocument
 Name:		php-pear-%{_pearname}
-Version:	0.2.0
-Release:	3
+Version:	0.2.1
+Release:	1
 License:	PHP License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
-# Source0-md5:	ab9a2366c91a81d664221d2f4ca54206
+# Source0-md5:	e799ee3a6fb5af395c40cc65fcaf0877
 URL:		http://pear.php.net/package/OpenDocument/
 BuildRequires:	php-pear-PEAR
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
